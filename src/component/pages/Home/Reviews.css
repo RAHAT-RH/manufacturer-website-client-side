@@ -1,0 +1,75 @@
+.bg-testimonial,
+#testimonial-slider .owl-nav {
+    position: relative;
+}
+
+#testimonial-slider {
+    margin-top: -90px;
+    margin-bottom: -20px;
+}
+
+.bg-transparent {
+    background: transparent;
+}
+
+.bg-testimonial::after {
+    height: 55%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    background: url(../../../assets/Review/testimonial-bg.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    z-index: -1;
+}
+
+.bg-testimonial::after,
+.testi-box .testimonial-round>img {
+    width: 100%;
+}
+
+.testi-box .testimonial-round {
+    height: 180px;
+    width: 180px;
+    overflow: hidden;
+}
+
+.testi-box .testimonial-round,
+.testi-box .testimonial-round>img {
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.testi-box.no-rounded .testimonial-round,
+.testi-box.no-rounded .testimonial-round>img {
+    -webkit-border-radius: 0 !important;
+    border-radius: 0 !important;
+    border: 1px solid #24cdd5;
+}
+
+.testi-box .testimonial-round:hover>img {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.testimonial-round>img {
+    pointer-events: none;
+}
+
+#testimonial-slider .owl-nav {
+    width: 300px;
+    display: inline-block;
+    height: 30px;
+    -webkit-transform: translateY(-150%);
+    -moz-transform: translateY(-150%);
+    -ms-transform: translateY(-150%);
+    -o-transform: translateY(-150%);
+    transform: translateY(-150%);
+    margin-left: 2%;
+    position: absolute;
+    z-index: 5;
+}
+
