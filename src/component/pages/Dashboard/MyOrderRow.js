@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const MyOrderRow = ({ myOrder, index }) => {
-    const { product, img, orderQuantity, totalPrice, userEmail, userName } = myOrder;
+    const {_id, product, img, orderQuantity, totalPrice, userEmail, userName } = myOrder;
     return (
         <tr class=''>
             <th>{index + 1}</th>
@@ -22,7 +22,11 @@ const MyOrderRow = ({ myOrder, index }) => {
             <td>{totalPrice}</td>
             <td>{orderQuantity}</td>
             <td>{userEmail}</td>
-            <td><Link to='/' class="btn btn-xs text-white">Pay</Link></td>
+            <td>{(totalPrice && !totalPrice.paid) && <Link to={`/dashboard/payment/${_id}`}><button className="btn btn-xs btn-success">Pay</button></Link>}
+                {(totalPrice && totalPrice.paid) && <div>
+                    <p><span className="text-success">Paid</span></p>
+                    <p>Transaction id: <span className="text-success"> {totalPrice.transactionId}</span></p>
+                </div>}</td>
         </tr>
     );
 };
