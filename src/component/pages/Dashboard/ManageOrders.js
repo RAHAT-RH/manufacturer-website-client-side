@@ -37,20 +37,13 @@ const ManageOrders = () => {
                              key={order._id} 
                              index={index} 
                              order={order}
+                             deletingProduct= {deletingProduct}
                              setDeletingProduct = {setDeletingProduct}
                              >
                              </ManageOrderRow>)
                         }
         
-                        {/* <tr>
-                            <th>1</th>
-                            <th>Name</th>
-                            <th>Product</th>
-                            <th>Quantity</th>
-                            <th>Total Price</th>
-                            <th>Email</th>
-                            <th>Status</th>
-                        </tr> */}
+                      
           
                     </tbody>
                 </table>
