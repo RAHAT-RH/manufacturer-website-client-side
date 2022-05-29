@@ -34,6 +34,9 @@ const Purchase = () => {
         if (parseInt(orderQuantity) < 2) {
             return setError('Min order 2')
         }
+        if (parseInt(orderQuantity) > quantity) {
+            return setError("No more than the specified quantity can be ordered")
+        }
         const totalPrice = parseInt(orderQuantity) * price;
         // const resentQuantity = parseInt(orderQuantity) - quantity;
         // console.log(numberPrice)
@@ -117,7 +120,7 @@ const Purchase = () => {
                             </div>
 
                             <div class="form-control mt-6">
-                                <button class="btn btn-primary">Order</button>
+                                <button class="btn btn-primary">Place Order</button>
                             </div>
                         </form>
                     </div>
