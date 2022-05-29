@@ -115,7 +115,8 @@ const Purchase = () => {
                                 </label>
                                 <input type="number" onClick={(event) => event.target.value} name='orderQuantity' required mim-value={2} class="input input-bordered" />
                                 <label class="label">
-                                    <span class="label-text">{error}</span>
+                                    <span class="label-text text-red-500">{error}</span>
+                                    {/* <span class="label-text">{error}</span> */}
                                 </label>
                             </div>
 
