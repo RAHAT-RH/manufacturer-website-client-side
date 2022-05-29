@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import PartsGroup from './PartsGroup';
 
 const ComputerParts = () => {
@@ -10,8 +11,8 @@ const ComputerParts = () => {
             .then(data => setParts(data))
     }, [])
     return (
-        <div>
-            <div className='py-10 text-center'>
+        <div className='pb-20'>
+            <div className='text-center p'>
                 <h2 className='text-xl font-bold text-primary'>Computer Parts</h2>
                 <h3 className='text-3xl'>Best Quality We Provide</h3>
             </div>
@@ -19,6 +20,9 @@ const ComputerParts = () => {
                 {
                     parts.slice(0, 6).map(part => <PartsGroup key={part._id} part={part}></PartsGroup>)
                 }
+            </div>
+            <div className='mx-auto text-center'>
+            <Link to='/allShowProducts' className='text-center btn btn-secondary'>See More</Link>
             </div>
         </div>
     );

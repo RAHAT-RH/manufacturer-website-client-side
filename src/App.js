@@ -23,6 +23,7 @@ import Payment from './component/pages/Dashboard/Payment';
 import MyProfile from './component/pages/Dashboard/MyProfile';
 import NotFound from './component/pages/NotFound/NotFound';
 import Footer from './component/shared/Footer/Footer';
+import AllShowProducts from './component/pages/Home/AllShowProducts/AllShowProducts';
 
 function App() {
   return (
@@ -56,6 +57,7 @@ function App() {
        </Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/signup" element={<SignUp></SignUp>}></Route>
+        <Route path="/allShowProducts" element={<AllShowProducts></AllShowProducts>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

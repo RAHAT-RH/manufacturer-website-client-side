@@ -1,15 +1,15 @@
 import React from 'react';
-
+import { FaUserPlus, FaFingerprint } from "react-icons/fa";
 const Stat = () => {
     return (
-        <div class="grid lg:grid-cols-3 sm:grid-cols-1 mx-auto  px-12  overflow-hidden">
+        <div class="grid lg:grid-cols-3 sm:grid-cols-1 mx-auto  pb-20  overflow-hidden">
 
             <div class="stat flex justify-center">
                 <div class="stat-figure text-secondary">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-8 h-8 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <FaUserPlus class="inline-block w-8 h-8" />
                 </div>
                 <div>
-                    <div class="stat-title">Downloads</div>
+                    <div class="stat-title">Customers</div>
                     <div class="stat-value">31K</div>
                     <div class="stat-desc">Jan 1st - Feb 1st</div>
                 </div>
@@ -26,7 +26,7 @@ const Stat = () => {
 
             <div class="stat flex justify-center">
                 <div class="stat-figure text-secondary">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-8 h-8 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path></svg>
+                <FaFingerprint class="inline-block w-8 h-8"/>
                 </div>
                 <div>
                     <div class="stat-title">New Registers</div>

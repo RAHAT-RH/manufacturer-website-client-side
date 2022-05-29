@@ -34,7 +34,7 @@ const Navbar = () => {
                             {user.photoURL ? <img src={user?.photoURL} alt='' /> : <img src={Avatar} style={{ width: '100%' }} alt='' />}
                         </div>
                     </label>
-                    <ul tabIndex="0" class="menu menu-compact dropdown-content mt-44 p-2 shadow bg-black text-white rounded-box w-52">
+                    <ul tabIndex="0" class="menu menu-compact dropdown-content mt-44 p-2 shadow bg-neutral text-white rounded-box w-52">
                         <li><button onClick={logout} className="btn btn-ghost">Sign Out</button></li>
                     </ul>
                 </div> :
@@ -45,7 +45,7 @@ const Navbar = () => {
         </>
     ]
     return (
-        <div class="navbar text-white bg-black lg:px-12 ">
+        <div class="navbar text-white bg-neutral lg:px-12 ">
             <div class="navbar-start">
                 <div class="dropdown ">
                     <label tabIndex="0" class="btn btn-ghost lg:hidden">
