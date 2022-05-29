@@ -22,6 +22,7 @@ import AllUsers from './component/pages/Dashboard/AllUsers';
 import Payment from './component/pages/Dashboard/Payment';
 import MyProfile from './component/pages/Dashboard/MyProfile';
 import NotFound from './component/pages/NotFound/NotFound';
+import Footer from './component/shared/Footer/Footer';
 
 function App() {
   return (
@@ -57,6 +58,7 @@ function App() {
         <Route path="/signup" element={<SignUp></SignUp>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
+      <Footer></Footer>
       <ToastContainer />
     </div>
   );

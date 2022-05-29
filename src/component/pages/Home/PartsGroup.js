@@ -5,7 +5,7 @@ const PartsGroup = ({part}) => {
     const {_id, name, img, quantity, price, description} = part
 
     return (
-        <div class="card card-compact w-96 bg-base-100 shadow-xl">
+        <div class="card mx-auto card-compact w-96 bg-base-100 shadow-xl">
             <figure><img src={img} alt="Shoes" /></figure>
             <div class="card-body">
                 <h2 class="card-title">{name}</h2>

@@ -5,6 +5,7 @@ import Services from './Services';
 import MakeAppointment from './about';
 import Testimonials from './Testimonials';
 import ComputerParts from './ComputerParts';
+import Stat from './Stat';
 
 
 const Home = () => {
@@ -16,8 +17,8 @@ const Home = () => {
             <ComputerParts></ComputerParts>
             <MakeAppointment></MakeAppointment>
             <Testimonials></Testimonials>
+            <Stat></Stat>
             {/* <Reviews></Reviews> */}
-            00D7DF
         </div>
     );
 };
