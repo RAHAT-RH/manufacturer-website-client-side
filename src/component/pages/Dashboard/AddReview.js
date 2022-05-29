@@ -97,8 +97,6 @@ const AddReview = () => {
                             </label>
                         </div>
 
-
-
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Designation</span>
@@ -137,8 +135,6 @@ const AddReview = () => {
                                 {errors.image?.type === 'required' && <span className="text-red-500 label-text-alt">{errors.image.message}</span>}
                             </label>
                         </div>
-
-
                         <input className='w-full btn' type="submit" value="Add Review" />
                     </form>
                 </div>

@@ -159,7 +159,7 @@ const MyProfile = () => {
                             </div>
 
                             <div class="form-control mt-6">
-                                <button class="btn btn-primary">Order</button>
+                                <button class="btn btn-primary">Add Profile</button>
                             </div>
                         </form>
                     </div>
