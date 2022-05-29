@@ -35,13 +35,13 @@ function App() {
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route path="/profile" element={<Profile></Profile>}></Route>
         <Route path="/contact" element={<Contact></Contact>}></Route>
-        <Route path="/dashboard" element={
+        <Route path="dashboard" element={
           <RequireAuth>
             <Dashboard></Dashboard>
           </RequireAuth>
         }>
           
-          <Route index element={<MyOrders></MyOrders>}></Route>
+          <Route path='/dashboard/myOrder' element={<MyOrders></MyOrders>}></Route>
           <Route path='myProfile' element={<MyProfile></MyProfile>}></Route>
           <Route path='addProduct' element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>
           <Route path='manageOrders' element={<RequireAdmin><ManageOrders></ManageOrders></RequireAdmin>}></Route>
