@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
-import { toast } from 'react-toastify';
 
 const ManageOrderRow = ({ order, index, refetch, setDeletingProduct }) => {
     const {  product, img, orderQuantity, transactionId, totalPrice, userName, userEmail, } = order;
-
-
-
     const [shipped, setShipped] = useState("pending")
     const changeStatus = () => {
         setShipped('shipped')
@@ -37,7 +33,6 @@ const ManageOrderRow = ({ order, index, refetch, setDeletingProduct }) => {
                 <label onClick={() => setDeletingProduct(order)} for="delete-confirm-modal" class="btn modal-button btn-xs btn-error">Delete</label>
                 {/* <button disabled={transactionId} onClick={handleDelete}>Delete</button> */}
                 <label onClick={changeStatus} class="ml-2 btn btn-xs btn-error"> Shipped </label>
-
             </th>
         </tr>
     );

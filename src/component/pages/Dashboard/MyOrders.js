@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
-import MyOrderRow from './MyOrderRow';
 
 const MyOrders = () => {
     const [user] = useAuthState(auth);
@@ -30,7 +29,7 @@ const MyOrders = () => {
                     setMyOrders(data);
                 })
         }
-    }, [user])
+    }, [user, navigate])
     return (
         <div className='overflow-x-hidden'>
 

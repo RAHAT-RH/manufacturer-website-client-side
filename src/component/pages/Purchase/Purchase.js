@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
@@ -25,7 +25,7 @@ const Purchase = () => {
     //         .then(res => res.json())
     //         .then(data => setSingleProduct(data))
     // }, [singleProduct])
-    const { _id, name, quantity, price, img, description } = services;
+    const {  name, quantity, price, img, description } = services;
 
 
     const placeOrder = event => {
@@ -35,7 +35,7 @@ const Purchase = () => {
             return setError('Min order 2')
         }
         const totalPrice = parseInt(orderQuantity) * price;
-        const resentQuantity = parseInt(orderQuantity) - quantity;
+        // const resentQuantity = parseInt(orderQuantity) - quantity;
         // console.log(numberPrice)
         // console.log(resentQuantity)
 

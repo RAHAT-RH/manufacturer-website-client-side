@@ -21,7 +21,7 @@ const Payment = () => {
     if(isLoading){
         return <Loading></Loading>
     }
-    const {userName, product, orderQuantity, totalPrice, userEmail, address} = order
+    const {userName, product, orderQuantity, totalPrice, address} = order
     return (
         <div>
             <div class="card w-50  max-w-md bg-base-100 shadow-xl my-12 mx-auto">
