@@ -78,12 +78,12 @@ const AddReview = () => {
 
                         {/* Description Field */}
 
-                        <div className="w-full  form-control">
+                        <div className="w-full form-control">
                             <label className="label">
                                 <span className="label-text">Description</span>
                             </label>
                             <textarea placeholder="write something"
-                                className="textarea textarea-bordered w-full"
+                                className="w-full textarea textarea-bordered"
                                 {...register("description", {
                                     required: {
                                         value: true,
@@ -115,8 +115,6 @@ const AddReview = () => {
                             />
                             <label className="label">
                                 {errors.designation?.type === 'required' && <span className="text-red-500 label-text-alt">{errors.email.message}</span>}
-
-
                             </label>
                         </div>
 
@@ -127,7 +125,7 @@ const AddReview = () => {
                                 <span className="label-text">Photo</span>
                             </label>
                             <input type="file"
-                                className="w-full  input input-bordered"
+                                className="w-full input input-bordered"
                                 {...register("image", {
                                     required: {
                                         value: true,
@@ -141,7 +139,7 @@ const AddReview = () => {
                         </div>
 
 
-                        <input className='w-full  btn' type="submit" value="Add Review" />
+                        <input className='w-full btn' type="submit" value="Add Review" />
                     </form>
                 </div>
             </div>

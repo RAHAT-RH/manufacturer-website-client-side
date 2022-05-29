@@ -2,9 +2,8 @@ import React from 'react';
 import Banner from './Banner';
 import Info from './Info';
 import Services from './Services';
-import MakeAppointment from './MakeAppointment';
+import MakeAppointment from './about';
 import Testimonials from './Testimonials';
-import Reviews from './Reviews';
 import ComputerParts from './ComputerParts';
 
 

@@ -37,8 +37,8 @@ const ManageOrders = () => {
                              key={order._id} 
                              index={index} 
                              order={order}
-                             deletingProduct= {deletingProduct}
-                             setDeletingProduct = {setDeletingProduct}
+                            refetch={refetch}
+                            setDeletingProduct={setDeletingProduct}
                              >
                              </ManageOrderRow>)
                         }
@@ -48,13 +48,21 @@ const ManageOrders = () => {
                     </tbody>
                 </table>
             </div>
-            {
+            {/* {
                 orders.map(order => <DeleteConfirmModal
                 deletingProduct={deletingProduct}
                 refetch={refetch}
                 setDeletingProduct = {setDeletingProduct}
                 order={order}
                 ></DeleteConfirmModal>)
+            } */}
+            {
+                deletingProduct && 
+                <DeleteConfirmModal
+                deletingProduct={deletingProduct}
+                refetch={refetch}
+                setDeletingProduct={setDeletingProduct}
+                ></DeleteConfirmModal>
             }
         </div>
     );

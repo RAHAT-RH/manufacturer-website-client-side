@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 
-const ManageOrderRow = ({ order, index,  setDeletingProduct }) => {
-    const {_id, product, img, orderQuantity, transactionId, totalPrice, userName, userEmail } = order;
-    console.log(setDeletingProduct(order))
-    //  console.log(setDeletingProduct)
+const ManageOrderRow = ({ order, index, refetch, setDeletingProduct }) => {
+    const {  product, img, orderQuantity, transactionId, totalPrice, userName, userEmail, } = order;
+
+
+
     const [shipped, setShipped] = useState("pending")
     const changeStatus = () => {
         setShipped('shipped')
@@ -32,9 +34,10 @@ const ManageOrderRow = ({ order, index,  setDeletingProduct }) => {
             {/* <th>{transactionId  && <div class="badge badge-sm">pending</div>} </th> */}
             <th>{(!transactionId) ? <div class="badge badge-sm p-3">not payment</div> : <div class="badge badge-sm p-3 badge-warning">{shipped}</div>} </th>
             <th>
-                <label disabled={transactionId}  for="delete-confirm-modal" class="btn modal-button btn-xs btn-error">Delete</label>
-                <label onClick={changeStatus}  class="btn modal-button btn-xs btn-error"> Shipped </label>
-                
+                <label onClick={() => setDeletingProduct(order)} for="delete-confirm-modal" class="btn modal-button btn-xs btn-error">Delete</label>
+                {/* <button disabled={transactionId} onClick={handleDelete}>Delete</button> */}
+                <label onClick={changeStatus} class="ml-2 btn btn-xs btn-error"> Shipped </label>
+
             </th>
         </tr>
     );

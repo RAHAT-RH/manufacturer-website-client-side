@@ -20,6 +20,8 @@ import ManageOrders from './component/pages/Dashboard/ManageOrders';
 import AddReview from './component/pages/Dashboard/AddReview';
 import AllUsers from './component/pages/Dashboard/AllUsers';
 import Payment from './component/pages/Dashboard/Payment';
+import MyProfile from './component/pages/Dashboard/MyProfile';
+import NotFound from './component/pages/NotFound/NotFound';
 
 function App() {
   return (
@@ -36,7 +38,9 @@ function App() {
             <Dashboard></Dashboard>
           </RequireAuth>
         }>
+          
           <Route index element={<MyOrders></MyOrders>}></Route>
+          <Route path='myProfile' element={<MyProfile></MyProfile>}></Route>
           <Route path='addProduct' element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>
           <Route path='manageOrders' element={<RequireAdmin><ManageOrders></ManageOrders></RequireAdmin>}></Route>
           <Route path='review' element={<AddReview></AddReview>}></Route>
@@ -51,6 +55,7 @@ function App() {
        </Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/signup" element={<SignUp></SignUp>}></Route>
+        <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <ToastContainer />
     </div>

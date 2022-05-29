@@ -17,7 +17,7 @@ const ComputerParts = () => {
             </div>
             <div className='grid gap-8 my-20 lg:px-12 sm:w-full sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                 {
-                    parts.map(part => <PartsGroup key={part._id} part={part}></PartsGroup>)
+                    parts.slice(0, 6).map(part => <PartsGroup key={part._id} part={part}></PartsGroup>)
                 }
             </div>
         </div>

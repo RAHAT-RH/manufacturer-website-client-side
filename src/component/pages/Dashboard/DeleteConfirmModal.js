@@ -1,49 +1,43 @@
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 
-const DeleteConfirmModal = ({ order, refetch, deletingProduct, setDeletingProduct }) => {
-    // const [deleteProduct, setDeleteProduct] = useState(null)
-    // set
-    const { product, _id } = order;
-    // console.log(product, _id)
+const DeleteConfirmModal = ({ refetch, deletingProduct, setDeletingProduct}) => {
+    const { product, _id, transactionId } = deletingProduct
 
-    const handlerDelete = (id) => {
-
-        const url = `http://localhost:5000/delete/${id}`
-        console.log(url)
-        fetch(url, {
-            method: 'DELETE',
-
+    const handleDelete = () => {
+        fetch(`http://localhost:5000/delete/${_id}`, {
+            method: "DELETE"
         })
             .then(res => res.json())
             .then(data => {
-                
                 if (data.deletedCount) {
-                    toast.success(`Product: ${id} is deleted`)
+                    toast.success(`${product} is deleted`)
+                    setDeletingProduct(null)
+                    refetch()
                 }
-                refetch()
             })
-
     }
-
 
     return (
         <div>
+
             {/* <label for="delete-confirm-modal" class="btn modal-button">open modal</label> */}
 
-            <input type="checkbox" id="" class="modal-toggle" />
-            {/* <div class="modal modal-bottom sm:modal-middle">
+            <input type="checkbox" id="delete-confirm-modal" class="modal-toggle" />
+            <div class="modal modal-bottom sm:modal-middle">
                 <div class="modal-box">
-                    {product}
-                    <h3 class="font-bold text-lg text-red-500">Are you sure want to delete !</h3>
-                    <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+                    <h3 class="font-bold text-lg text-red-500">Are you sure Want to delete {product}?</h3>
+                    <p class="py-4">This user not payment</p>
                     <div class="modal-action">
-                        <button onClick={()=>handlerDelete(_id)} class="btn btn-xs btn-error">Delete</button>
+                        <button disabled={transactionId} onClick={handleDelete} className="btn btn-xs btn-error">Delete</button>
                         <label for="delete-confirm-modal" class="btn btn-xs">Cancel</label>
                     </div>
                 </div>
-            </div> */}
-            <button></button>
+            </div>
+
+
+
+
         </div >
     );
 };
