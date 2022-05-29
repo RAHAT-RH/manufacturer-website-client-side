@@ -1,6 +1,7 @@
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import formatRelativeWithOptions from 'date-fns/fp/formatRelativeWithOptions/index.js';
 import React, { useEffect, useState } from 'react';
+import Loading from '../../shared/Loading/Loading';
 
 const CheckoutForm = ({ order }) => {
     const stripe = useStripe();
@@ -42,7 +43,7 @@ const CheckoutForm = ({ order }) => {
             return;
         }
 
-        const { error, paymentMethod } = await stripe.createPaymentMethod({
+        const { error } = await stripe.createPaymentMethod({
             type: 'card',
             card
         });
@@ -100,6 +101,9 @@ const CheckoutForm = ({ order }) => {
                     setProcessing(formatRelativeWithOptions)
                     console.log(data);
                 })
+        }
+        if(processing) {
+            return <Loading></Loading>
         }
     }
     return (
