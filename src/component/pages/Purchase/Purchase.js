@@ -20,12 +20,7 @@ const Purchase = () => {
         return <Loading></Loading>
     }
 
-    // useEffect(() => {
-    //     fetch(`http://localhost:5000/allProducts/${id}`)
-    //         .then(res => res.json())
-    //         .then(data => setSingleProduct(data))
-    // }, [singleProduct])
-    const {  name, quantity, price, img, description } = services;
+    const { name, quantity, price, img, description } = services;
 
 
     const placeOrder = event => {
