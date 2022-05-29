@@ -128,6 +128,9 @@ const CheckoutForm = ({ order }) => {
                 <button className='mt-4 btn btn-success btn-sm' type="submit" disabled={!stripe || !clientSecret}>
                     Pay
                 </button>
+                <div>
+                    <p className='text-red-500'><span className='font-bold text-warning'>Note: </span> After Pay Button Click Wait Some Seconds</p>
+                </div>
             </form>
             {
                 cardError && <p className='text-red-500'>{cardError}</p>
