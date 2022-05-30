@@ -1,15 +1,35 @@
-# Getting Started with Create React App
+# Tech Parts
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project used tailwindCss with [Create React App] with daisy component
 
-## Available Scripts
+## Live Siite 
+open [https://assignment-12-pc.web.app/](https://assignment-12-pc.web.app/)
+
+## This project Github Link
+open [https://github.com/programming-hero-web-course1/manufacturer-website-client-side-RAHAT-RH](https://github.com/programming-hero-web-course1/manufacturer-website-client-side-RAHAT-RH)
+
+### About Tech Parts
+Tech Parts sell Computer Equipments. Example: CPU Casing , MotherBoard, Ram , HardDisk , SSD etc
+Payment option Card ....... stripe get way method
+
+* Use TaileWindCss
+* use Google firebase
+* use useQuery for Fetch
+* use React From use
+* Here use stripe for payment
+* use Silk for slider
+* Use Firebase hooks
+* Use Custom Link 
+* use External hook
+* User Private Route
+* Addmin private Route
 
 In the project directory, you can run:
-
 ### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
